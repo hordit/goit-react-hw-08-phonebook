@@ -10,7 +10,7 @@ const Home = () => {
       <StyledH1>Welcome to the Phonebook!</StyledH1>
       <StyledText>
         Create your unique phone book now and find peace of mind, knowing that
-        your contacts are always protected and accessible whenever you require
+        require
         them.
       </StyledText>
     </StyledMain>

@@ -10,15 +10,15 @@ export const StyledMain = styled.main`
   align-items: center;
 `;
 
-// export const StyledVideo = styled.video`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-//   z-index: -1;
-// `;
+export const StyledVideo = styled.video`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+`;
 
 export const StyledH1 = styled.h1`
   color: ${p => p.theme.colors.white};

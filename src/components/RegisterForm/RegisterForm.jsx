@@ -1,5 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import { Box } from '@mui/material';
+import {
+  CustomButtonSub,
+  CustomForm,
+  CustomTextField,
+} from 'components/CustomElements/CustomForm';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -18,21 +24,38 @@ const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
-        Username
-        <input type="text" name="name" />
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+    <CustomForm onSubmit={handleSubmit} autoComplete="off">
+      <CustomTextField
+        label="Username"
+        name="name"
+        variant="outlined"
+        size="small"
+        fullWidth
+        margin="normal"
+      />
+      <CustomTextField
+        label="Email"
+        name="email"
+        variant="outlined"
+        size="small"
+        fullWidth
+        margin="normal"
+      />
+      <CustomTextField
+        label="Password"
+        name="password"
+        type="password"
+        variant="outlined"
+        size="small"
+        fullWidth
+        margin="normal"
+      />
+      <Box display="flex" justifyContent="center" mt={2}>
+        <CustomButtonSub type="submit" variant="contained" color="primary">
+          Register
+        </CustomButtonSub>
+      </Box>
+    </CustomForm>
   );
 };
 

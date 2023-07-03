@@ -1,13 +1,15 @@
 import { useAuth } from 'hooks';
-import { NavWrapper, StyledNavLink } from './Navigation.styled';
+import { NavWrapper } from './Navigation.styled';
+import CustomButton from 'components/CustomElements/CustomButton';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
     <NavWrapper>
-      <StyledNavLink to="/">Home</StyledNavLink>
-      {isLoggedIn && <StyledNavLink to="/contacts">Contacts</StyledNavLink>}
+      <CustomButton component={NavLink} to="/">Home</CustomButton>
+      {isLoggedIn && <CustomButton component={NavLink} to="/contacts">Contacts</CustomButton>}
     </NavWrapper>
   );
 };

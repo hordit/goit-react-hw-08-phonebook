@@ -11,23 +11,25 @@ const theme = {
   colors: {
     black: '#000000',
     white: '#ffffff',
-    colorButton: '#85b4ec',
-    hoverButton: '#126de8',
+    navLink: '#319AA0',
+    activeNavLink: '#01191F',
   },
-  border: '1px solid #dddedf',
-  borderRadius: '5px',
+  backgroundColor: {
+    appBar: '#022A39',
+    activeNavLink: '#319AA0',
+  },
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename="/goit-react-hw-08-phonebook">
-          <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <BrowserRouter basename="/goit-react-hw-08-phonebook">
             <App />
-          </ThemeProvider>
-        </BrowserRouter>
-      </PersistGate>
-    </Provider>
+          </BrowserRouter>
+        </PersistGate>
+      </Provider>
+    </ThemeProvider>
   </React.StrictMode>
 );

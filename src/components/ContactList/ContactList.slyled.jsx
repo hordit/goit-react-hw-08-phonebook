@@ -9,4 +9,5 @@ export const Ul = styled.ul`
 
 export const Li = styled.li`
   padding-bottom: 5px;
+  color: ${p => p.theme.colors.white};
 `;

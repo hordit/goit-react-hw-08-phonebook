@@ -1,28 +1,22 @@
-import { MagnifyingGlass } from 'react-loader-spinner';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { CircleLoader } from 'react-spinners';
+import styled from 'styled-components';
 
-export const Loader = () => {
-  return (
-    <MagnifyingGlass
-      visible={true}
-      height="80"
-      width="80"
-      ariaLabel="MagnifyingGlass-loading"
-      wrapperStyle={{}}
-      wrapperClass="MagnifyingGlass-wrapper"
-      glassColor="#c0efff"
-      color="#e15b64"
-    />
-  );
-};
+const LoaderContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-Loader.propTypes = {
-  visible: PropTypes.bool,
-  height: PropTypes.number,
-  width: PropTypes.number,
-  ariaLabel: PropTypes.string,
-  wrapperStyle: PropTypes.object,
-  wrapperClass: PropTypes.string,
-  glassColor: PropTypes.string,
-  color: PropTypes.string,
-};
+const Loader = ({ color, size }) => (
+  <LoaderContainer>
+    <CircleLoader color={color} size={size} />
+  </LoaderContainer>
+);
+
+export default Loader;

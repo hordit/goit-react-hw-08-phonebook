@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
-export const DivWrapper = styled.div`
-  padding-top: 25px;
-`;
-
-export const InputFilter = styled.input`
+export const DivWrapper = styled.div``;
+export const FinedLabel = styled.label`
   display: flex;
-  padding: 4px;
-  margin-top: 10px;
-  font-size: 14px;
-  border: ${p => p.theme.border};
-  border-radius: ${p => p.theme.borderRadius};
-  &:hover,
-  &:focus {
-    border-color: ${p => p.theme.colors.borderAccent};
-    outline: none;
-  }
+  flex-direction: column;
+  align-items: center;
+  color: ${p => p.theme.colors.white};
+`;
+export const InputFilter = styled.input`
+  width: 100%;
+  padding: 8px;
+  margin-top: 3px;
+  color: ${p => p.theme.colors.white};
+  border: 1px solid ${p => p.theme.activeNavLink};
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
 `;

@@ -4,7 +4,7 @@ import videoBackground from '../../video/video-background.mp4';
 const Home = () => {
   return (
     <StyledMain>
-      <StyledVideo autoPlay loop muted>
+      <StyledVideo autoPlay loop muted playsInline>
         <source src={videoBackground} type="video/mp4" />
       </StyledVideo>
       <StyledH1>Welcome to the Phonebook!</StyledH1>

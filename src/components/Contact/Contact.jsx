@@ -1,7 +1,8 @@
-import { P, ButtonDelete, Div } from './Contact.styled';
+import { P, Div, ButtonDelete } from './Contact.styled';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
 import PropTypes from 'prop-types';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
@@ -12,13 +13,16 @@ export const Contact = ({ id, name, number }) => {
       <P>
         {name}: {number}
       </P>
-      <ButtonDelete aria-label="Delete" onClick={handleDelete}>
-        Delete
+      <ButtonDelete
+        aria-label="Delete"
+        onClick={handleDelete}
+        disableBackground
+      >
+        <DeleteIcon fontSize="small" />
       </ButtonDelete>
     </Div>
   );
 };
-
 
 Contact.propTypes = {
   id: PropTypes.string.isRequired,

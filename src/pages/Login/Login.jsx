@@ -1,16 +1,19 @@
 import LoginForm from 'components/LoginForm/LoginForm';
-import { NavLink } from 'react-router-dom';
+import { ContentContainer, MainContainer } from './Login.styled';
+import { CustomNavLink } from 'components/CustomElements/CustomForm';
 
 const Login = () => {
   return (
-    <main>
-      <h2>Log In</h2>
-      <LoginForm />
-      <p>
-        Are you not yet registered?
-        <NavLink to="/register">Sign up</NavLink>
-      </p>
-    </main>
+    <MainContainer>
+      <ContentContainer>
+        <h2>Log In</h2>
+        <LoginForm />
+        <p>
+          Are you not yet registered?
+          <CustomNavLink to="/register">Sign up</CustomNavLink>
+        </p>
+      </ContentContainer>
+    </MainContainer>
   );
 };
 

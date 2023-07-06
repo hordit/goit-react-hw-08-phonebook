@@ -1,9 +1,6 @@
 import RegisterForm from 'components/RegisterForm/RegisterForm';
-import { NavLink } from 'react-router-dom';
-import {
-  ContentContainer,
-  MainContainer,
-} from './Register.styled';
+import { ContentContainer, MainContainer } from './Register.styled';
+import { CustomNavLink } from 'components/CustomElements/CustomForm';
 
 const Register = () => {
   return (
@@ -13,7 +10,7 @@ const Register = () => {
         <RegisterForm />
         <p>
           Have you already signed up?
-          <NavLink to="/login">Sign in</NavLink>
+          <CustomNavLink to="/login">Sign in</CustomNavLink>
         </p>
       </ContentContainer>
     </MainContainer>

@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import { Box } from '@mui/material';
+
 import {
+  CustomBox,
   CustomButtonSub,
   CustomForm,
   CustomTextField,
@@ -50,11 +51,11 @@ const RegisterForm = () => {
         fullWidth
         margin="normal"
       />
-      <Box display="flex" justifyContent="center" mt={2}>
+      <CustomBox>
         <CustomButtonSub type="submit" variant="contained" color="primary">
           Register
         </CustomButtonSub>
-      </Box>
+      </CustomBox>
     </CustomForm>
   );
 };

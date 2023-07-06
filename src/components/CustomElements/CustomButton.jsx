@@ -4,7 +4,7 @@ import { Button } from '@mui/material';
 
 const StyledButton = styled(Button)(() => ({
   color: '#319AA0',
-  fontSize: '14px',
+  fontSize: '13px',
   padding: '5px 20px',
   '&:not(:last-child)': {
     marginRight: '10px',
@@ -13,6 +13,7 @@ const StyledButton = styled(Button)(() => ({
     backgroundColor: '#01191F',
     color: '#319AA0',
     borderRadius: '4px',
+    padding: '5px 20px',
   },
   '&.active': {
     backgroundColor: '#319AA0',

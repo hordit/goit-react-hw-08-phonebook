@@ -1,6 +1,6 @@
 import { Formik } from 'formik';
 import {
-  ButtonAdd,
+  ErrorMessageStyled,
   FormStyled,
   InputStyled,
   Label,
@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
 import { capitalizedName } from 'utils/capitalizedName';
+import { CustomBox } from 'components/CustomElements/CustomForm';
+import CustomButton from 'components/CustomElements/CustomButtonPhonebook';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -57,6 +59,7 @@ const ContactForm = () => {
             required
           />
         </Label>
+        <ErrorMessageStyled name="name" component="div" />
         <Label>
           Number
           <InputStyled
@@ -67,9 +70,10 @@ const ContactForm = () => {
             required
           />
         </Label>
-        <div>
-          <ButtonAdd type="submit">Add contact</ButtonAdd>
-        </div>
+        <ErrorMessageStyled name="number" component="div" />
+        <CustomBox>
+          <CustomButton type="submit">Add contact</CustomButton>
+        </CustomBox>
       </FormStyled>
     </Formik>
   );

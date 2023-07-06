@@ -1,11 +1,16 @@
 import ContactForm from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import Filter from 'components/Filter/Filter';
-import { Loader } from 'components/Loader/Loader';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
 import { selectIsLoading } from 'redux/contacts/selectors';
+import {
+  MainContainer,
+  PhonebookTitle,
+  SectionContainer,
+} from './Contacts.styled';
+import CenteredLoader from 'components/Loader/Loader';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -17,18 +22,18 @@ const Contacts = () => {
 
   return (
     <div>
-      <main>
-        <section title="Phonebook">
-        <h1>Your phonebook</h1>
+      <MainContainer>
+        <SectionContainer title="Phonebook">
+          <PhonebookTitle>Your phonebook</PhonebookTitle>
           <ContactForm />
-        </section>
-        <section title="Contacts">
-        <h2>Contacts</h2>
+        </SectionContainer>
+        <SectionContainer title="Contacts">
+          <PhonebookTitle>Contacts</PhonebookTitle>
           <Filter />
-          {isLoading && <Loader />}
+          {isLoading && <CenteredLoader color="#fff" size={80} />}
           <ContactList />
-        </section>
-      </main>
+        </SectionContainer>
+      </MainContainer>
     </div>
   );
 };

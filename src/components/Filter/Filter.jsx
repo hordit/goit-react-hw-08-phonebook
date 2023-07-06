@@ -1,4 +1,4 @@
-import { DivWrapper, InputFilter } from './Filter.styled';
+import { DivWrapper, FinedLabel, InputFilter } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'redux/contacts/contactsSlice';
 import { selectFilter } from 'redux/contacts/selectors';
@@ -13,10 +13,10 @@ const Filter = () => {
 
   return (
     <DivWrapper>
-      <label>
+      <FinedLabel>
         Fined contacts by name
         <InputFilter type="text" value={filter} onChange={handleChange} />
-      </label>
+      </FinedLabel>
     </DivWrapper>
   );
 };

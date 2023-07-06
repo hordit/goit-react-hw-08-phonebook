@@ -1,5 +1,5 @@
 import AppBar from 'components/AppBar/AppBar';
-import { Loader } from 'components/Loader/Loader';
+import CenteredLoader from 'components/Loader/Loader';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ const SharedLayout = () => {
   return (
     <div>
       <AppBar />
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<CenteredLoader color="#fff" />}>
         <Outlet />
       </Suspense>
     </div>

@@ -1,10 +1,7 @@
 import { Contact } from 'components/Contact/Contact';
 import { Li, Ul } from './ContactList.slyled';
 import { useSelector } from 'react-redux';
-import {
-  selectError,
-  selectFilteredContacts,
-} from 'redux/contacts/selectors';
+import { selectError, selectFilteredContacts } from 'redux/contacts/selectors';
 
 export const ContactList = () => {
   const filtredContacts = useSelector(selectFilteredContacts);

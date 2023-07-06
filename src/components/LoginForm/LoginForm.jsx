@@ -1,3 +1,9 @@
+import {
+  CustomBox,
+  CustomButtonSub,
+  CustomForm,
+  CustomTextField,
+} from 'components/CustomElements/CustomForm';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 
@@ -8,26 +14,39 @@ const LoginForm = () => {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
-        logIn({
-            email: form.elements.email.value,
-            password: form.elements.password.value,
-        })
+      logIn({
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
     );
     form.reset();
   };
 
   return (
-    <form onSubmit={handlesubmit} autoComplete='off'>
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+    <CustomForm onSubmit={handlesubmit} autoComplete="off">
+      <CustomTextField
+        label="Email"
+        name="email"
+        variant="outlined"
+        size="small"
+        fullWidth
+        margin="normal"
+      />
+      <CustomTextField
+        label="Password"
+        name="password"
+        type="password"
+        variant="outlined"
+        size="small"
+        fullWidth
+        margin="normal"
+      />
+      <CustomBox>
+        <CustomButtonSub type="submit" variant="contained" color="primary">
+          Log In
+        </CustomButtonSub>
+      </CustomBox>
+    </CustomForm>
   );
 };
 

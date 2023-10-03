@@ -27,7 +27,7 @@ export const StyledH1 = styled.h1`
 `;
 
 export const StyledText = styled.p`
-padding: 20px 40px;
+padding: 30px 70px;
   color: ${p => p.theme.colors.white};
   font-size: 25px;
 `;

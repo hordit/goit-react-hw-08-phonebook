@@ -2,10 +2,10 @@ import {
   CustomBox,
   CustomButtonSub,
   CustomForm,
-  CustomTextField,
 } from 'components/CustomElements/CustomForm';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
+import { CustomTextFieldStyled } from './LoginForm.styled';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const LoginForm = () => {
 
   return (
     <CustomForm onSubmit={handlesubmit} autoComplete="off">
-      <CustomTextField
+      <CustomTextFieldStyled
         label="Email"
         name="email"
         variant="outlined"
@@ -32,7 +32,7 @@ const LoginForm = () => {
         fullWidth
         margin="normal"
       />
-      <CustomTextField
+      <CustomTextFieldStyled
         label="Password"
         name="password"
         type="password"

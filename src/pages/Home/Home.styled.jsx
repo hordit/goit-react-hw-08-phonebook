@@ -27,7 +27,12 @@ export const StyledH1 = styled.h1`
 `;
 
 export const StyledText = styled.p`
+margin: 0px 100px;
 padding: 30px 70px;
   color: ${p => p.theme.colors.white};
   font-size: 25px;
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 20px;
+  }
 `;

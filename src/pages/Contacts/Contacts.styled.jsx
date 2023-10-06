@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 export const MainContainer = styled(Box)`
   display: flex;
   justify-content: space-evenly;
+  margin-top: 60px;
   background: url(${backImagePhonebook});
   background-position: center;
   background-size: cover;

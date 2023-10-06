@@ -9,12 +9,14 @@ const UserMenu = () => {
   const { user } = useAuth();
 
   return (
+    <>
     <UserMenuContainer>
-      <WelcomUser>Welcome, {user.name}!</WelcomUser>
       <CustomButton onClick={() => dispatch(logOut())}>
         Logout
       </CustomButton>
     </UserMenuContainer>
+    <WelcomUser>Welcome, {user.name}!</WelcomUser>
+    </>
   );
 };
 

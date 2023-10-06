@@ -5,6 +5,7 @@ import {
   InputStyled,
   Label,
 } from './ContactForm.styled';
+import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
@@ -27,7 +28,7 @@ const ContactForm = () => {
     );
 
     if (isExistName) {
-      alert(`${capitalizedName(contact.name)} is already in contacts`);
+      toast.error(`${capitalizedName(contact.name)} is already in contacts`);
       return resetForm();
     } else {
       dispatch(
